@@ -7,11 +7,10 @@ import java.io.IOException;
 
 public class Facade {
     private static Facade instance;
-    private final MyFileReader reader;  // Agregué 'final' ya que solo se asigna en el constructor
+    private final MyFileReader reader; 
     private final MyFileWriter writer;
     private final FileEncryptor encryptor;
     
-    // Constructor único y privado
     private Facade() {
         this.reader = new MyFileReader();
         this.writer = new MyFileWriter();
